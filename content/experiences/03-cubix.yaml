@@ -1,0 +1,14 @@
+order: 3
+chapter: "Chapter III"
+title: "Cubix"
+date: "2022–Present"
+description: >
+  Where craft met deadlines. Shipping real products for real clients,
+  learning that good engineering is invisible and good design is felt,
+  not noticed.
+technologies:
+  - React & Next.js
+  - TypeScript
+  - Product Strategy
+  - System Design
+featured: true

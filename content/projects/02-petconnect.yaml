@@ -1,0 +1,17 @@
+order: 2
+title: "PetConnect"
+description: >
+  A community platform connecting pet owners with trusted local sitters,
+  built with the same care you'd want for your own cat.
+role: "Product Engineer"
+stack:
+  - React
+  - Node.js
+  - MongoDB
+  - Tailwind CSS
+outcome: "Onboarded 2,000+ verified sitters in the first quarter with a 4.9 average trust rating."
+links:
+  visit: "https://example.com"
+  github: "https://github.com/"
+  caseStudy: "/work/petconnect"
+featured: true

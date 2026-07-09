@@ -1,0 +1,67 @@
+# Add or remove entries freely — the Expertise badges (About section) and the
+# Skills & Certifications section both read from this same list.
+#
+# category groups items inside the Skills section (e.g. "Frontend", "Backend").
+# expertise: true also surfaces the badge as a small chip in the About section.
+# icon accepts any lucide-react icon name in kebab-case (see lib list in Skills.tsx).
+
+- order: 1
+  name: "React"
+  category: "Frontend"
+  icon: "atom"
+  expertise: true
+- order: 2
+  name: "Next.js"
+  category: "Frontend"
+  icon: "layers"
+  expertise: true
+- order: 3
+  name: "TypeScript"
+  category: "Frontend"
+  icon: "file-code"
+  expertise: true
+- order: 4
+  name: "Tailwind CSS"
+  category: "Frontend"
+  icon: "palette"
+  expertise: true
+- order: 5
+  name: "Framer Motion"
+  category: "Frontend"
+  icon: "sparkles"
+  expertise: true
+- order: 6
+  name: "Node.js"
+  category: "Backend"
+  icon: "server"
+  expertise: true
+- order: 7
+  name: "PostgreSQL"
+  category: "Backend"
+  icon: "database"
+  expertise: false
+- order: 8
+  name: "REST & GraphQL APIs"
+  category: "Backend"
+  icon: "network"
+  expertise: false
+- order: 9
+  name: "System Design"
+  category: "Engineering"
+  icon: "workflow"
+  expertise: true
+- order: 10
+  name: "Product Strategy"
+  category: "Product"
+  icon: "compass"
+  expertise: false
+- order: 11
+  name: "Design Systems"
+  category: "Design"
+  icon: "component"
+  expertise: false
+- order: 12
+  name: "UI/UX Design"
+  category: "Design"
+  icon: "pen-tool"
+  expertise: false

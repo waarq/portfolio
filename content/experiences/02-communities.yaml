@@ -1,0 +1,14 @@
+order: 2
+chapter: "Chapter II"
+title: "Communities"
+date: "2021–2022"
+description: >
+  Learning stopped being a solo pursuit. Building alongside other people,
+  teaching what I knew and borrowing what I didn't, taught me more about
+  product thinking than any tutorial ever could.
+technologies:
+  - React
+  - Node.js
+  - Community Building
+  - Mentorship
+featured: true

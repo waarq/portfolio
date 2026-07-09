@@ -1,0 +1,60 @@
+import {
+  Atom,
+  Layers,
+  FileCode,
+  Palette,
+  Sparkles,
+  Sparkle,
+  Server,
+  Database,
+  Network,
+  Workflow,
+  Compass,
+  Component,
+  PenTool,
+  Award,
+  Cloud,
+  Code,
+  Cpu,
+  GitBranch,
+  Globe,
+  LayoutGrid,
+  Terminal,
+  Wand2,
+  Boxes,
+  Braces,
+  type LucideIcon,
+} from "lucide-react";
+
+// Extend this map any time you add a skill/certification with a new `icon:`
+// value in the YAML content files — the key is the kebab-case name used there.
+export const iconMap: Record<string, LucideIcon> = {
+  atom: Atom,
+  layers: Layers,
+  "file-code": FileCode,
+  palette: Palette,
+  sparkles: Sparkles,
+  sparkle: Sparkle,
+  server: Server,
+  database: Database,
+  network: Network,
+  workflow: Workflow,
+  compass: Compass,
+  component: Component,
+  "pen-tool": PenTool,
+  award: Award,
+  cloud: Cloud,
+  code: Code,
+  cpu: Cpu,
+  "git-branch": GitBranch,
+  globe: Globe,
+  "layout-grid": LayoutGrid,
+  terminal: Terminal,
+  wand: Wand2,
+  boxes: Boxes,
+  braces: Braces,
+};
+
+export function getIcon(name: string): LucideIcon {
+  return iconMap[name] ?? Sparkle;
+}

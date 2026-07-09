@@ -1,0 +1,22 @@
+# Add a new certification by adding another entry below — the Skills &
+# Certifications section renders every item automatically, newest first
+# is a good convention but `order` is what actually controls sequence.
+
+- order: 1
+  title: "Meta Front-End Developer"
+  issuer: "Meta (Coursera)"
+  date: "2023"
+  credentialUrl: "https://coursera.org/"
+  icon: "award"
+- order: 2
+  title: "AWS Certified Cloud Practitioner"
+  issuer: "Amazon Web Services"
+  date: "2023"
+  credentialUrl: "https://aws.amazon.com/certification/"
+  icon: "cloud"
+- order: 3
+  title: "JavaScript Algorithms & Data Structures"
+  issuer: "freeCodeCamp"
+  date: "2022"
+  credentialUrl: "https://freecodecamp.org/"
+  icon: "code"
