@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://waleedahmed.dev/sitemap.xml",
+    sitemap: "https://waleedahmed.site/sitemap.xml",
   };
 }

@@ -8,7 +8,7 @@ import "@fontsource/cormorant/600.css";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 
-const siteUrl = "https://waleedahmed.dev";
+const siteUrl = "https://waleedahmed.site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
