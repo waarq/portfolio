@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GeistSans } from "geist/font/sans";
 import "@fontsource/instrument-serif";
 import "@fontsource/instrument-serif/400-italic.css";
@@ -88,6 +90,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-body antialiased selection:bg-accent-terracotta">
         <CustomCursor />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
