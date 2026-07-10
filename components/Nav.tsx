@@ -56,7 +56,7 @@ export default function Nav() {
           className="absolute inset-0 border-b border-ink/10 bg-paper/70 backdrop-blur-xl backdrop-saturate-150 dark:border-dark-text/10 dark:bg-dark-bg/70"
         />
 
-        <div className="relative grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-4 px-6 py-5 md:px-12 md:py-6">
+        <div className="relative grid grid-cols-[auto_1fr_auto] items-center gap-4 px-6 py-5 md:px-12 md:py-6">
           <a
             href="#top"
             data-cursor-hover
@@ -67,7 +67,7 @@ export default function Nav() {
             </motion.span>
           </a>
 
-          <nav className="hidden items-center justify-center gap-8 md:flex">
+          <nav className="hidden md:flex items-center justify-center gap-8">
             {links.map((link) => (
               <a
                 key={link.href}
