@@ -20,5 +20,5 @@
   href: "mailto:ateeq800@gmail.com"
   icon: "mail"
 - label: "Resume"
-  href: "public/resume.pdf"
+  href: "/resume.pdf"
   icon: "file-text"
