@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
-const roles = ["Software Engineer", "Product Builder", "Content Creator"];
+const roles = ["Software Engineer", "Product Builder", "Content Creator", "Full Stack Developer"];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -26,7 +26,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft"
+          className="text-md sm:text-2xl uppercase tracking-widest sm:tracking-widest2 text-ink-soft dark:text-dark-soft"
         >
           Waleed Ahmed
         </motion.p>
