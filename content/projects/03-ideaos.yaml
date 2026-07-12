@@ -1,0 +1,28 @@
+order: 3
+image: "/images/projects/idea-os.png"
+title: "IdeaOS"
+status: "In Development"
+description: >
+  IdeaOS is an AI powered platform for turning early ideas into validated
+  business plans, currently in development. It uses AI research agents,
+  a visual canvas, and real time collaboration to help users plan and test
+  new products. Built with Next.js, TypeScript, Node.js, PostgreSQL,
+  Prisma, OpenAI, React Flow, and Socket.io.
+role: "Full Stack Software Engineer"
+stack:
+  - Next.js
+  - TypeScript
+  - Node.js
+  - Express.js
+  - PostgreSQL
+  - Prisma
+  - OpenAI
+  - React Flow
+  - Socket.io
+  - Tailwind CSS
+outcome: "Helps people validate and plan new product ideas faster."
+links:
+  visit: ""
+  github: ""
+  caseStudy: ""
+featured: true
