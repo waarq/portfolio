@@ -5,12 +5,58 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Github, FileText } from "lucide-re
 import { motion } from "framer-motion";
 import type { Project } from "@/lib/content";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 const gradients = [
   "from-accent-terracotta/25 via-paper-card to-paper-card",
   "from-accent-olive/25 via-paper-card to-paper-card",
   "from-accent-dusty/25 via-paper-card to-paper-card",
 ];
+
+
+// Maps status text to a dot/pill color. Falls back to a neutral amber
+// for anything in-progress, and green for anything live/shipped.
+function getStatusStyles(status: string) {
+  const isLive = /live|shipped/i.test(status);
+  if (isLive) {
+    return {
+      dot: "bg-emerald-500 dark:bg-emerald-400",
+      ring: "bg-emerald-500/40 dark:bg-emerald-400/40",
+      text: "text-emerald-700 dark:text-emerald-300",
+      border: "border-emerald-500/25 dark:border-emerald-400/25",
+      bg: "bg-emerald-500/8 dark:bg-emerald-400/10",
+    };
+  }
+  return {
+    dot: "bg-amber-500 dark:bg-amber-400",
+    ring: "bg-amber-500/40 dark:bg-amber-400/40",
+    text: "text-amber-700 dark:text-amber-300",
+    border: "border-amber-500/25 dark:border-amber-400/25",
+    bg: "bg-amber-500/8 dark:bg-amber-400/10",
+  };
+}
+
+function StatusPill({ status }: { status: string }) {
+  const s = getStatusStyles(status);
+  return (
+    <motion.span
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      className={`mt-4 inline-flex w-fit items-center gap-2 rounded-full border ${s.border} ${s.bg} px-3 py-1 text-xs font-medium ${s.text}`}
+    >
+      <span className="relative flex h-2 w-2">
+        <motion.span
+          className={`absolute inline-flex h-full w-full rounded-full ${s.ring}`}
+          animate={{ scale: [1, 2.2, 1], opacity: [0.7, 0, 0.7] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <span className={`relative inline-flex h-2 w-2 rounded-full ${s.dot}`} />
+      </span>
+      {status}
+    </motion.span>
+  );
+}
 
 export default function Projects({ projects }: { projects: Project[] }) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -104,10 +150,19 @@ export default function Projects({ projects }: { projects: Project[] }) {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className={`relative order-1 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br ${gradients[i % gradients.length]} md:col-span-7`}
               >
+
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-6xl font-bold tracking-tightest2 text-ink/10 dark:text-dark-text/10 md:text-8xl">
-                    {project.title}
-                  </span>
+                   <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    priority={i === 0}
+                    sizes="(max-width: 768px) 100vw, 58vw"
+                    className="object-cover object-top"
+                  />
+                  {/* Subtle theme-aware overlay for depth and cohesion with the card */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-paper-card/50 via-transparent to-transparent dark:from-dark-bg/60" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-ink/5 via-transparent to-transparent dark:from-white/5" />
                 </div>
               </motion.div>
 
@@ -118,6 +173,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                 <h3 className="mt-3 font-display text-3xl font-bold tracking-tightest2 text-ink dark:text-dark-text md:text-5xl">
                   {project.title}
                 </h3>
+                 {project.status && <StatusPill status={project.status} />}
                 <p className="mt-5 max-w-md text-balance text-lg leading-[1.75] text-ink-soft dark:text-dark-soft">
                   {project.description}
                 </p>
