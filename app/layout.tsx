@@ -46,6 +46,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+     apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   manifest: "/manifest.webmanifest",
@@ -63,9 +68,9 @@ const jsonLd = {
       description: "Designs experiences, engineers systems, and obsesses over details.",
       address: { "@type": "PostalAddress", addressLocality: "Karachi", addressCountry: "PK" },
       sameAs: [
-        "https://www.linkedin.com/in/",
-        "https://github.com/",
-        "https://www.instagram.com/",
+        "https://www.linkedin.com/in/waleedaahmed/",
+        "https://github.com/waarq/",
+        "https://www.instagram.com/pizzalaylo/",
       ],
     },
     {
@@ -73,6 +78,7 @@ const jsonLd = {
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
       name: "Waleed Ahmed",
+      alternateName: "waleedahmed.site",
       publisher: { "@id": `${siteUrl}/#person` },
     },
   ],
