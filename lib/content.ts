@@ -33,6 +33,8 @@ export type Experience = z.infer<typeof ExperienceSchema>;
 
 const ProjectSchema = z.object({
   order: z.number(),
+  image: z.string(),
+  status: z.string().optional(),
   title: z.string(),
   description: z.string(),
   role: z.string(),

@@ -1,0 +1,27 @@
+order: 1
+image: "/images/projects/clinic-os.png"
+title: "ClinicOS"
+status: "In Development"
+description: >
+  ClinicOS is a clinic management platform for healthcare providers,
+  currently in development. It helps clinics manage patient records,
+  appointment scheduling, and daily operations from one dashboard. Built
+  with Next.js, TypeScript, Node.js, Express, PostgreSQL, Prisma, and
+  JWT authentication.
+role: "Full Stack Software Engineer"
+stack:
+  - Next.js
+  - TypeScript
+  - Tailwind CSS
+  - Node.js
+  - Express.js
+  - PostgreSQL
+  - Prisma
+  - Socket.io
+  - JWT
+outcome: "Aims to give clinics a faster, simpler way to manage patients and appointments."
+links:
+  visit: ""
+  github: ""
+  caseStudy: ""
+featured: true
