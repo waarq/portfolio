@@ -14,11 +14,12 @@ export default function Home() {
   const socials = getSocials();
   const skills = getSkills();
   const certifications = getCertifications();
+  const resumeHref = socials.find((s) => s.label === "Resume")?.href;
 
   return (
     <main className="relative">
       <InteractiveBackground />
-      <Nav />
+      <Nav resumeHref={resumeHref} />
       <Hero />
       <div className="hairline relative z-10 mx-6 text-ink/40 dark:text-dark-text/40 md:mx-12" />
       <About skills={skills} />

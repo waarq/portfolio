@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { FileText, Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
@@ -16,7 +16,7 @@ const links = [
 
 const FULL_NAME = "Waleed Ahmed";
 
-export default function Nav() {
+export default function Nav({ resumeHref }: { resumeHref?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const rawProgress = useTransform(scrollY, [0, 160], [0, 1], { clamp: true });
@@ -82,6 +82,31 @@ export default function Nav() {
           </nav>
 
           <div className="flex items-center justify-end gap-3">
+            {resumeHref && (
+              <a
+                href={resumeHref}
+                data-cursor-hover
+                aria-label="Resume"
+                className="focus-ring group hidden h-9 items-center gap-1.5 rounded-full border border-ink/15 px-3.5 text-sm text-ink-soft transition-colors duration-500 ease-expensive hover:border-accent-terracotta hover:text-accent-terracotta dark:border-dark-text/15 dark:text-dark-soft dark:hover:border-accent-dusty dark:hover:text-accent-dusty lg:inline-flex"
+              >
+                <FileText
+                  size={13}
+                  strokeWidth={1.5}
+                  className="transition-transform duration-500 ease-expensive group-hover:-translate-y-0.5"
+                />
+                Resume
+              </a>
+            )}
+            {resumeHref && (
+              <a
+                href={resumeHref}
+                data-cursor-hover
+                aria-label="Resume"
+                className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 text-ink-soft transition-colors duration-500 ease-expensive hover:border-accent-terracotta hover:text-accent-terracotta dark:border-dark-text/15 dark:text-dark-soft dark:hover:border-accent-dusty dark:hover:text-accent-dusty lg:hidden"
+              >
+                <FileText size={16} strokeWidth={1.5} />
+              </a>
+            )}
             <ThemeToggle />
             <button
               type="button"

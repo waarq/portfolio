@@ -23,6 +23,27 @@ import {
   Wand2,
   Boxes,
   Braces,
+
+  // New
+  Leaf,
+  Wind,
+  Building,
+  RadioTower,
+  Table,
+  Search,
+  GitMerge,
+  Bot,
+  Scan,
+  BrainCircuit,
+  MousePointer,
+  Cylinder,
+  TableProperties,
+  Package,
+  Rocket,
+  DatabaseBackup,
+  SendHorizontal,
+  Monitor,
+
   type LucideIcon,
 } from "lucide-react";
 
@@ -31,28 +52,56 @@ import {
 export const iconMap: Record<string, LucideIcon> = {
   atom: Atom,
   layers: Layers,
-  "file-code": FileCode,
+  leaf: Leaf,
+  component: Component,
   palette: Palette,
+  wind: Wind,
+
+  server: Server,
+  network: Network,
+  building: Building,
+  workflow: Workflow,
+  "radio-tower": RadioTower,
+
+  "file-code": FileCode,
+  braces: Braces,
+  terminal: Terminal,
+  table: Table,
+
+  search: Search,
+  "git-merge": GitMerge,
   sparkles: Sparkles,
   sparkle: Sparkle,
-  server: Server,
-  database: Database,
-  network: Network,
-  workflow: Workflow,
-  compass: Compass,
-  component: Component,
-  "pen-tool": PenTool,
-  award: Award,
-  cloud: Cloud,
-  code: Code,
+  bot: Bot,
+  scan: Scan,
+
   cpu: Cpu,
+  "brain-circuit": BrainCircuit,
+  github: GitBranch,
+  "mouse-pointer": MousePointer,
+
+  database: Database,
+  cylinder: Cylinder,
+  "table-properties": TableProperties,
+  boxes: Boxes,
+
+  cloud: Cloud,
+  package: Package,
   "git-branch": GitBranch,
+  rocket: Rocket,
+
+  "database-backup": DatabaseBackup,
+  "send-horizontal": SendHorizontal,
+
+  "pen-tool": PenTool,
+  monitor: Monitor,
+
+  compass: Compass,
+  code: Code,
   globe: Globe,
   "layout-grid": LayoutGrid,
-  terminal: Terminal,
+  award: Award,
   wand: Wand2,
-  boxes: Boxes,
-  braces: Braces,
 };
 
 export function getIcon(name: string): LucideIcon {
