@@ -21,7 +21,8 @@ export default function Skills({
       <SectionAbstract variant="bottom-left" />
       <Reveal>
         <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft">
-          Skills &amp; Certifications
+          {/* Skills &amp; Certifications */}
+          Skills
         </span>
       </Reveal>
 
@@ -74,7 +75,7 @@ export default function Skills({
       </div>
 
       {/* Certifications — cinematic cards */}
-      {certifications.length > 0 && (
+      {/* {certifications.length > 0 && (
         <div className="mt-16">
           <Reveal>
             <span className="text-xs uppercase tracking-widest2 text-ink-soft/70 dark:text-dark-soft/70">
@@ -137,7 +138,7 @@ export default function Skills({
             })}
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

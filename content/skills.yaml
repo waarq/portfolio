@@ -1,67 +1,209 @@
-# Add or remove entries freely — the Expertise badges (About section) and the
-# Skills & Certifications section both read from this same list.
-#
-# category groups items inside the Skills section (e.g. "Frontend", "Backend").
-# expertise: true also surfaces the badge as a small chip in the About section.
-# icon accepts any lucide-react icon name in kebab-case (see lib list in Skills.tsx).
-
 - order: 1
-  name: "React"
+  name: "React.js"
   category: "Frontend"
   icon: "atom"
-  expertise: true
+  expertise: false
+
 - order: 2
   name: "Next.js"
   category: "Frontend"
   icon: "layers"
   expertise: true
+
 - order: 3
-  name: "TypeScript"
+  name: "Nuxt.js"
   category: "Frontend"
-  icon: "file-code"
+  icon: "leaf"
   expertise: true
+
 - order: 4
+  name: "Vue.js"
+  category: "Frontend"
+  icon: "component"
+  expertise: false
+
+- order: 5
   name: "Tailwind CSS"
   category: "Frontend"
-  icon: "palette"
+  icon: "wind"
   expertise: true
-- order: 5
-  name: "Framer Motion"
-  category: "Frontend"
-  icon: "sparkles"
-  expertise: true
+
 - order: 6
   name: "Node.js"
   category: "Backend"
   icon: "server"
   expertise: true
+
 - order: 7
-  name: "PostgreSQL"
-  category: "Backend"
-  icon: "database"
-  expertise: false
-- order: 8
-  name: "REST & GraphQL APIs"
+  name: "Express.js"
   category: "Backend"
   icon: "network"
   expertise: false
+
+- order: 8
+  name: "NestJS"
+  category: "Backend"
+  icon: "building"
+  expertise: false
+
 - order: 9
-  name: "System Design"
-  category: "Engineering"
+  name: "REST APIs"
+  category: "Backend"
   icon: "workflow"
   expertise: true
+
 - order: 10
-  name: "Product Strategy"
-  category: "Product"
-  icon: "compass"
-  expertise: false
+  name: "Socket.io"
+  category: "Backend"
+  icon: "radio-tower"
+  expertise: true
+
 - order: 11
-  name: "Design Systems"
-  category: "Design"
-  icon: "component"
-  expertise: false
+  name: "JavaScript (ES6+)"
+  category: "Languages"
+  icon: "file-code"
+  expertise: true
+
 - order: 12
-  name: "UI/UX Design"
+  name: "TypeScript"
+  category: "Languages"
+  icon: "braces"
+  expertise: true
+
+- order: 13
+  name: "C++"
+  category: "Languages"
+  icon: "terminal"
+  expertise: false
+
+- order: 14
+  name: "SQL"
+  category: "Languages"
+  icon: "table"
+  expertise: false
+
+- order: 15
+  name: "Web Scraping"
+  category: "Automation & AI"
+  icon: "search"
+  expertise: false
+
+- order: 16
+  name: "n8n"
+  category: "Automation & AI"
+  icon: "git-merge"
+  expertise: true
+
+- order: 17
+  name: "OpenAI API"
+  category: "Automation & AI"
+  icon: "sparkles"
+  expertise: false
+
+- order: 18
+  name: "Puppeteer"
+  category: "Automation & AI"
+  icon: "bot"
+  expertise: false
+
+- order: 19
+  name: "Cheerio"
+  category: "Automation & AI"
+  icon: "scan"
+  expertise: false
+
+- order: 20
+  name: "Codex"
+  category: "AI Coding"
+  icon: "cpu"
+  expertise: false
+
+- order: 21
+  name: "Claude Code"
+  category: "AI Coding"
+  icon: "brain-circuit"
+  expertise: true
+
+- order: 22
+  name: "GitHub Copilot"
+  category: "AI Coding"
+  icon: "github"
+  expertise: false
+
+- order: 23
+  name: "Cursor AI"
+  category: "AI Coding"
+  icon: "mouse-pointer"
+  expertise: true
+
+- order: 24
+  name: "PostgreSQL"
+  category: "Database"
+  icon: "database"
+  expertise: true
+
+- order: 25
+  name: "MongoDB"
+  category: "Database"
+  icon: "cylinder"
+  expertise: true
+
+- order: 26
+  name: "MySQL"
+  category: "Database"
+  icon: "table-properties"
+  expertise: false
+
+- order: 27
+  name: "Prisma ORM"
+  category: "Database"
+  icon: "boxes"
+  expertise: true
+
+- order: 28
+  name: "AWS"
+  category: "Cloud & DevOps"
+  icon: "cloud"
+  expertise: false
+
+- order: 29
+  name: "Docker"
+  category: "Cloud & DevOps"
+  icon: "package"
+  expertise: true
+
+- order: 30
+  name: "Git & GitHub"
+  category: "Cloud & DevOps"
+  icon: "git-branch"
+  expertise: true
+
+- order: 31
+  name: "CI/CD"
+  category: "Cloud & DevOps"
+  icon: "rocket"
+  expertise: false
+
+- order: 32
+  name: "Supabase"
+  category: "Tools & Services"
+  icon: "database-backup"
+  expertise: false
+
+- order: 33
+  name: "Postman"
+  category: "Tools & Services"
+  icon: "send-horizontal"
+  expertise: true
+
+- order: 34
+  name: "Figma"
   category: "Design"
   icon: "pen-tool"
   expertise: false
+
+- order: 35
+  name: "Responsive Design"
+  category: "Design"
+  icon: "monitor"
+  expertise: true
