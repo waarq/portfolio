@@ -1,209 +1,175 @@
 - order: 1
-  name: "React.js"
-  category: "Frontend"
-  icon: "atom"
+  name: React.js
+  category: Frontend
+  icon: atom
   expertise: false
-
 - order: 2
-  name: "Next.js"
-  category: "Frontend"
-  icon: "layers"
+  name: Next.js
+  category: Frontend
+  icon: layers
   expertise: true
-
 - order: 3
-  name: "Nuxt.js"
-  category: "Frontend"
-  icon: "leaf"
+  name: Nuxt.js
+  category: Frontend
+  icon: leaf
   expertise: true
-
 - order: 4
-  name: "Vue.js"
-  category: "Frontend"
-  icon: "component"
+  name: Vue.js
+  category: Frontend
+  icon: component
   expertise: false
-
 - order: 5
-  name: "Tailwind CSS"
-  category: "Frontend"
-  icon: "wind"
+  name: Tailwind CSS
+  category: Frontend
+  icon: wind
   expertise: true
-
 - order: 6
-  name: "Node.js"
-  category: "Backend"
-  icon: "server"
+  name: Node.js
+  category: Backend
+  icon: server
   expertise: true
-
 - order: 7
-  name: "Express.js"
-  category: "Backend"
-  icon: "network"
+  name: Express.js
+  category: Backend
+  icon: network
   expertise: false
-
 - order: 8
-  name: "NestJS"
-  category: "Backend"
-  icon: "building"
+  name: NestJS
+  category: Backend
+  icon: building
   expertise: false
-
 - order: 9
-  name: "REST APIs"
-  category: "Backend"
-  icon: "workflow"
+  name: REST APIs
+  category: Backend
+  icon: workflow
   expertise: true
-
 - order: 10
-  name: "Socket.io"
-  category: "Backend"
-  icon: "radio-tower"
+  name: Socket.io
+  category: Backend
+  icon: radio-tower
   expertise: true
-
 - order: 11
-  name: "JavaScript (ES6+)"
-  category: "Languages"
-  icon: "file-code"
+  name: JavaScript (ES6+)
+  category: Languages
+  icon: file-code
   expertise: true
-
 - order: 12
-  name: "TypeScript"
-  category: "Languages"
-  icon: "braces"
+  name: TypeScript
+  category: Languages
+  icon: braces
   expertise: true
-
 - order: 13
-  name: "C++"
-  category: "Languages"
-  icon: "terminal"
+  name: C++
+  category: Languages
+  icon: terminal
   expertise: false
-
 - order: 14
-  name: "SQL"
-  category: "Languages"
-  icon: "table"
+  name: SQL
+  category: Languages
+  icon: table
   expertise: false
-
 - order: 15
-  name: "Web Scraping"
-  category: "Automation & AI"
-  icon: "search"
+  name: Web Scraping
+  category: Automation & AI
+  icon: search
   expertise: false
-
 - order: 16
-  name: "n8n"
-  category: "Automation & AI"
-  icon: "git-merge"
+  name: n8n
+  category: Automation & AI
+  icon: git-merge
   expertise: true
-
 - order: 17
-  name: "OpenAI API"
-  category: "Automation & AI"
-  icon: "sparkles"
+  name: OpenAI API
+  category: Automation & AI
+  icon: sparkles
   expertise: false
-
 - order: 18
-  name: "Puppeteer"
-  category: "Automation & AI"
-  icon: "bot"
+  name: Puppeteer
+  category: Automation & AI
+  icon: bot
   expertise: false
-
 - order: 19
-  name: "Cheerio"
-  category: "Automation & AI"
-  icon: "scan"
+  name: Cheerio
+  category: Automation & AI
+  icon: scan
   expertise: false
-
 - order: 20
-  name: "Codex"
-  category: "AI Coding"
-  icon: "cpu"
+  name: Codex
+  category: AI Coding
+  icon: cpu
   expertise: false
-
 - order: 21
-  name: "Claude Code"
-  category: "AI Coding"
-  icon: "brain-circuit"
+  name: Claude Code
+  category: AI Coding
+  icon: brain-circuit
   expertise: true
-
 - order: 22
-  name: "GitHub Copilot"
-  category: "AI Coding"
-  icon: "github"
+  name: GitHub Copilot
+  category: AI Coding
+  icon: github
   expertise: false
-
 - order: 23
-  name: "Cursor AI"
-  category: "AI Coding"
-  icon: "mouse-pointer"
+  name: Cursor AI
+  category: AI Coding
+  icon: mouse-pointer
   expertise: true
-
 - order: 24
-  name: "PostgreSQL"
-  category: "Database"
-  icon: "database"
+  name: PostgreSQL
+  category: Database
+  icon: database
   expertise: true
-
 - order: 25
-  name: "MongoDB"
-  category: "Database"
-  icon: "cylinder"
+  name: MongoDB
+  category: Database
+  icon: cylinder
   expertise: true
-
 - order: 26
-  name: "MySQL"
-  category: "Database"
-  icon: "table-properties"
+  name: MySQL
+  category: Database
+  icon: table-properties
   expertise: false
-
 - order: 27
-  name: "Prisma ORM"
-  category: "Database"
-  icon: "boxes"
+  name: Prisma ORM
+  category: Database
+  icon: boxes
   expertise: true
-
 - order: 28
-  name: "AWS"
-  category: "Cloud & DevOps"
-  icon: "cloud"
+  name: AWS
+  category: Cloud & DevOps
+  icon: cloud
   expertise: false
-
 - order: 29
-  name: "Docker"
-  category: "Cloud & DevOps"
-  icon: "package"
+  name: Docker
+  category: Cloud & DevOps
+  icon: package
   expertise: true
-
 - order: 30
-  name: "Git & GitHub"
-  category: "Cloud & DevOps"
-  icon: "git-branch"
+  name: Git & GitHub
+  category: Cloud & DevOps
+  icon: git-branch
   expertise: true
-
 - order: 31
-  name: "CI/CD"
-  category: "Cloud & DevOps"
-  icon: "rocket"
+  name: CI/CD
+  category: Cloud & DevOps
+  icon: rocket
   expertise: false
-
 - order: 32
-  name: "Supabase"
-  category: "Tools & Services"
-  icon: "database-backup"
+  name: Supabase
+  category: Tools & Services
+  icon: database-backup
   expertise: false
-
 - order: 33
-  name: "Postman"
-  category: "Tools & Services"
-  icon: "send-horizontal"
+  name: Postman
+  category: Tools & Services
+  icon: send-horizontal
   expertise: true
-
 - order: 34
-  name: "Figma"
-  category: "Design"
-  icon: "pen-tool"
+  name: Figma
+  category: Design
+  icon: pen-tool
   expertise: false
-
 - order: 35
-  name: "Responsive Design"
-  category: "Design"
-  icon: "monitor"
+  name: Responsive Design
+  category: Design
+  icon: monitor
   expertise: true

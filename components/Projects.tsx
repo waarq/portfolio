@@ -58,7 +58,7 @@ function StatusPill({ status }: { status: string }) {
   );
 }
 
-export default function Projects({ projects }: { projects: Project[] }) {
+export default function Projects({ projects, eyebrow }: { projects: Project[]; eyebrow: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
 
@@ -98,7 +98,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <Reveal>
           <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft">
-            Selected work
+            {eyebrow}
           </span>
         </Reveal>
 

@@ -5,14 +5,16 @@ import { ArrowUpRight, Award } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionAbstract from "./SectionAbstract";
 import { getIcon } from "@/lib/icons";
-import type { Certification, Skill } from "@/lib/content";
+import type { Certification, Skill, SkillsSectionContent } from "@/lib/content";
 
 export default function Skills({
   skills,
   certifications,
+  content,
 }: {
   skills: Skill[];
   certifications: Certification[];
+  content: SkillsSectionContent;
 }) {
   const categories = Array.from(new Set(skills.map((s) => s.category)));
 
@@ -21,14 +23,13 @@ export default function Skills({
       <SectionAbstract variant="bottom-left" />
       <Reveal>
         <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft">
-          {/* Skills &amp; Certifications */}
-          Skills
+          {content.eyebrow}
         </span>
       </Reveal>
 
       <Reveal delay={0.05}>
         <p className="text-balance mt-6 font-display text-3xl leading-[1.2] tracking-tightest2 text-ink dark:text-dark-text md:text-5xl">
-          Tools I reach for, and the credentials behind them.
+          {content.headline}
         </p>
       </Reveal>
 

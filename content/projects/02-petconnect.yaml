@@ -1,24 +1,23 @@
 order: 2
-image: "/images/projects/pet-connect.png"
-title: "PetConnect"
-status: "Phase 2 In Development"
+image: /images/projects/pet-connect.png
+status: Phase 2 In Development
+title: PetConnect
 description: >
-  PetConnect is a pet adoption platform that helps people find adoptable
-  pets and connect with local shelters. Phase 1 is responsive
-  website for browsing pets, shelters, and adoption resources. Built with
-  Next.js, TypeScript, Tailwind CSS and Shadcn UI.
-  The platform focuses on creating a connected ecosystem for pet owners,
-  adopters, and animal welfare communities.
-role: "Full Stack Software Engineer"
+  PetConnect is a pet adoption platform that helps people find adoptable pets
+  and connect with local shelters. Phase 1 is responsive website for browsing
+  pets, shelters, and adoption resources. Built with Next.js, TypeScript,
+  Tailwind CSS and Shadcn UI. The platform focuses on creating a connected
+  ecosystem for pet owners, adopters, and animal welfare communities.
+role: Full Stack Software Engineer
 stack:
   - Next.js
   - TypeScript
   - Tailwind CSS
   - Framer Motion
   - Shadcn/UI
-outcome: "Makes it easier for people to discover adoptable pets and shelters online."
+outcome: Makes it easier for people to discover adoptable pets and shelters online.
 links:
-  visit: ""
-  github: ""
-  caseStudy: ""
+  visit: ''
+  github: ''
+  caseStudy: ''
 featured: true

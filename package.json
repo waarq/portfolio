@@ -5,21 +5,32 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "npm run sync-sanity",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync-sanity": "tsx scripts/sync-sanity.ts",
+    "migrate-to-sanity": "tsx scripts/migrate-to-sanity.ts",
+    "seed-development": "tsx scripts/seed-development.ts",
+    "promote-to-production": "tsx scripts/promote-to-production.ts"
   },
   "dependencies": {
     "@fontsource/cormorant": "^5.2.8",
     "@fontsource/instrument-serif": "^5.2.8",
+    "@sanity/client": "^7.26.2",
+    "@sanity/image-url": "^2.1.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "dotenv": "^17.4.2",
     "framer-motion": "^11.3.19",
     "geist": "^1.7.2",
     "js-yaml": "^4.1.0",
     "lucide-react": "^0.417.0",
     "next": "15.5.18",
+    "next-sanity": "^11.6.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "sanity": "^4.22.0",
+    "styled-components": "^6.5.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -30,6 +41,7 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
+    "tsx": "^4.23.11",
     "typescript": "^5.5.4"
   }
 }

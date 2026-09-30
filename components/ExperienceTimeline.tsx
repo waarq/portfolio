@@ -7,7 +7,13 @@ import Reveal from "./Reveal";
 import TimelineStar from "./TimelineStar";
 import SectionAbstract from "./SectionAbstract";
 
-export default function ExperienceTimeline({ experiences }: { experiences: Experience[] }) {
+export default function ExperienceTimeline({
+  experiences,
+  eyebrow,
+}: {
+  experiences: Experience[];
+  eyebrow: string;
+}) {
   const railRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -26,7 +32,7 @@ export default function ExperienceTimeline({ experiences }: { experiences: Exper
       <SectionAbstract variant="top-right" />
       <Reveal>
         <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft">
-          Experience
+          {eyebrow}
         </span>
       </Reveal>
 

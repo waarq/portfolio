@@ -31,7 +31,15 @@ const iconMap: Record<string, LucideIcon> = {
   "file-text": FileText,
 };
 
-export default function Footer({ socials }: { socials: Social[] }) {
+export default function Footer({
+  socials,
+  eyebrow,
+  cta,
+}: {
+  socials: Social[];
+  eyebrow: string;
+  cta: string;
+}) {
   const [showCat, setShowCat] = useState(false);
   const [activeLabel, setActiveLabel] = useState<string | null>(null);
   const primaryContact = socials[0];
@@ -68,7 +76,7 @@ export default function Footer({ socials }: { socials: Social[] }) {
       <Reveal className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-wrap items-start gap-x-5 gap-y-4 md:items-center">
           <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft md:self-center">
-            Contact
+            {eyebrow}
           </span>
           <span className="hidden h-4 w-px bg-ink/15 dark:bg-dark-text/15 md:inline-block md:self-center" />
 
@@ -132,7 +140,7 @@ export default function Footer({ socials }: { socials: Social[] }) {
             data-cursor-hover
             className="focus-ring group inline-flex items-center gap-2 font-display text-lg font-semibold tracking-tightest2 text-ink transition-colors duration-500 ease-expensive hover:text-accent-terracotta dark:text-dark-text dark:hover:text-accent-dusty"
           >
-            Let&rsquo;s build something together
+            {cta}
             <ArrowUpRight
               size={17}
               strokeWidth={1.5}

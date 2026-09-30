@@ -4,9 +4,9 @@ import { Cat } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 import { getIcon } from "@/lib/icons";
-import type { Skill } from "@/lib/content";
+import type { AboutSectionContent, Skill } from "@/lib/content";
 
-export default function About({ skills }: { skills: Skill[] }) {
+export default function About({ skills, content }: { skills: Skill[]; content: AboutSectionContent }) {
   const badges = skills.filter((s) => s.expertise);
 
   return (
@@ -15,7 +15,7 @@ export default function About({ skills }: { skills: Skill[] }) {
         <div className="md:col-span-4">
           <Reveal>
             <span className="text-md uppercase tracking-wide text-ink-soft dark:text-dark-soft">
-              About
+              {content.eyebrow}
             </span>
           </Reveal>
         </div>
@@ -23,30 +23,22 @@ export default function About({ skills }: { skills: Skill[] }) {
         <div className="md:col-span-7 md:col-start-6">
           <Reveal delay={0.05}>
             <p className="text-balance font-display text-3xl leading-[1.2] tracking-tightest2 text-ink dark:text-dark-text md:text-5xl">
-              I&rsquo;ve always been fascinated by products that feel effortless.
+              {content.headline}
             </p>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <p className="mt-8 max-w-xl text-balance text-xl leading-[1.75] text-ink-soft dark:text-dark-soft">
-              The kind people recommend without thinking. That&rsquo;s what I enjoy
-              building: software that disappears into the task, and design that
-              earns trust in the first three seconds.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.25}>
-            <p className="mt-6 max-w-xl text-balance text-xl leading-[1.75] text-ink-soft dark:text-dark-soft">
-              I work across the stack, but I spend most of my attention on the
-              parts people actually feel: pacing, hierarchy, the half-second
-              before something responds.
-            </p>
-          </Reveal>
+          {content.paragraphs.map((paragraph, i) => (
+            <Reveal key={paragraph} delay={0.15 + i * 0.1}>
+              <p className="mt-8 max-w-xl text-balance text-xl leading-[1.75] text-ink-soft dark:text-dark-soft first:mt-8 [&:not(:first-child)]:mt-6">
+                {paragraph}
+              </p>
+            </Reveal>
+          ))}
 
           {badges.length > 0 && (
             <Reveal delay={0.32} className="mt-10">
               <span className="text-xs uppercase tracking-widest2 text-ink-soft/70 dark:text-dark-soft/70">
-                Currently working with
+                {content.expertiseLabel}
               </span>
               <div className="mt-4 flex flex-wrap gap-2.5">
                 {badges.map((skill, i) => {
@@ -112,7 +104,7 @@ export default function About({ skills }: { skills: Skill[] }) {
                 strokeWidth={1.5}
                 className="text-ink-soft/40 transition-colors duration-500 ease-expensive group-hover:text-accent-terracotta dark:text-dark-soft/40 dark:group-hover:text-accent-dusty"
               />
-              <span className="font-note italic">still learning.</span>
+              <span className="font-note italic">{content.tagline}</span>
             </span>
           </Reveal>
         </div>

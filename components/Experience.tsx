@@ -1,7 +1,8 @@
-import { getExperiences } from "@/lib/content";
+import { getExperiences, getExperienceSection } from "@/lib/content";
 import ExperienceTimeline from "./ExperienceTimeline";
 
 export default function Experience() {
   const experiences = getExperiences();
-  return <ExperienceTimeline experiences={experiences} />;
+  const section = getExperienceSection();
+  return <ExperienceTimeline experiences={experiences} eyebrow={section.eyebrow} />;
 }

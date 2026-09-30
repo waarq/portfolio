@@ -3,18 +3,19 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import type { SiteSettings } from "@/lib/content";
 
-const roles = ["Software Engineer", "Product Builder", "Content Creator", "Full Stack Developer"];
-
-export default function Hero() {
+export default function Hero({ settings }: { settings: SiteSettings }) {
+  const { name, roles, heroHeadline, heroSubtext } = settings;
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
+    if (roles.length === 0) return;
     const interval = setInterval(() => {
       setRoleIndex((i) => (i + 1) % roles.length);
     }, 2600);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <section
@@ -28,7 +29,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-md sm:text-2xl uppercase tracking-widest sm:tracking-widest2 text-ink-soft dark:text-dark-soft"
         >
-          Waleed Ahmed
+          {name}
         </motion.p>
 
         <motion.h1
@@ -37,21 +38,23 @@ export default function Hero() {
           transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="text-balance mt-6 font-display text-[13vw] font-bold leading-[0.98] tracking-tightest2 text-ink dark:text-dark-text md:text-[6.4vw]"
         >
-          Building software people actually enjoy using.
+          {heroHeadline}
         </motion.h1>
 
         <div className="mt-8 h-9 overflow-hidden md:mt-10 md:h-10">
           <AnimatePresence mode="wait">
-            <motion.p
-              key={roles[roleIndex]}
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -14 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="font-note text-2xl italic leading-relaxed text-accent-terracotta dark:text-accent-dusty md:text-3xl"
-            >
-              {roles[roleIndex]}
-            </motion.p>
+            {roles.length > 0 && (
+              <motion.p
+                key={roles[roleIndex]}
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -14 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="font-note text-2xl italic leading-relaxed text-accent-terracotta dark:text-accent-dusty md:text-3xl"
+              >
+                {roles[roleIndex]}
+              </motion.p>
+            )}
           </AnimatePresence>
         </div>
       </div>
@@ -63,7 +66,7 @@ export default function Hero() {
         className="flex items-end justify-between"
       >
         <p className="max-w-xs text-balance text-lg leading-relaxed text-ink-soft dark:text-dark-soft">
-          Currently building things from Karachi.
+          {heroSubtext}
         </p>
 
         <motion.a

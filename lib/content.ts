@@ -20,6 +20,12 @@ function readYamlDir<T>(dirName: string, schema: z.ZodType<T, z.ZodTypeDef, any>
   return items.sort((a: any, b: any) => (a.order ?? 0) - (b.order ?? 0));
 }
 
+function readYamlFile<T>(relativePath: string, schema: z.ZodType<T, z.ZodTypeDef, any>): T {
+  const filePath = path.join(contentDir, relativePath);
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return schema.parse(yaml.load(raw));
+}
+
 const ExperienceSchema = z.object({
   order: z.number(),
   chapter: z.string(),
@@ -75,6 +81,39 @@ const CertificationSchema = z.object({
 });
 export type Certification = z.infer<typeof CertificationSchema>;
 
+const SiteSettingsSchema = z.object({
+  name: z.string(),
+  roles: z.array(z.string()).default([]),
+  heroHeadline: z.string(),
+  heroSubtext: z.string(),
+  footerCta: z.string(),
+});
+export type SiteSettings = z.infer<typeof SiteSettingsSchema>;
+
+const AboutSectionSchema = z.object({
+  eyebrow: z.string(),
+  headline: z.string(),
+  paragraphs: z.array(z.string()).default([]),
+  expertiseLabel: z.string(),
+  tagline: z.string(),
+});
+export type AboutSectionContent = z.infer<typeof AboutSectionSchema>;
+
+const SkillsSectionSchema = z.object({
+  eyebrow: z.string(),
+  headline: z.string(),
+});
+export type SkillsSectionContent = z.infer<typeof SkillsSectionSchema>;
+
+const ExperienceSectionSchema = z.object({ eyebrow: z.string() });
+export type ExperienceSectionContent = z.infer<typeof ExperienceSectionSchema>;
+
+const ProjectsSectionSchema = z.object({ eyebrow: z.string() });
+export type ProjectsSectionContent = z.infer<typeof ProjectsSectionSchema>;
+
+const ContactSectionSchema = z.object({ eyebrow: z.string() });
+export type ContactSectionContent = z.infer<typeof ContactSectionSchema>;
+
 export function getExperiences(): Experience[] {
   return readYamlDir("experiences", ExperienceSchema);
 }
@@ -107,4 +146,28 @@ export function getCertifications(): Certification[] {
   const parsed = yaml.load(raw);
   const list = z.array(CertificationSchema).parse(parsed);
   return list.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+}
+
+export function getSiteSettings(): SiteSettings {
+  return readYamlFile("site-settings.yaml", SiteSettingsSchema);
+}
+
+export function getAboutSection(): AboutSectionContent {
+  return readYamlFile("sections/about.yaml", AboutSectionSchema);
+}
+
+export function getSkillsSection(): SkillsSectionContent {
+  return readYamlFile("sections/skills.yaml", SkillsSectionSchema);
+}
+
+export function getExperienceSection(): ExperienceSectionContent {
+  return readYamlFile("sections/experience.yaml", ExperienceSectionSchema);
+}
+
+export function getProjectsSection(): ProjectsSectionContent {
+  return readYamlFile("sections/projects.yaml", ProjectsSectionSchema);
+}
+
+export function getContactSection(): ContactSectionContent {
+  return readYamlFile("sections/contact.yaml", ContactSectionSchema);
 }
